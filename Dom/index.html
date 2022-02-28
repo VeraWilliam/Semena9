@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script><!-- Libreria para hacer topScroll -->
+  <title>Ejercicio_DOM</title>
+  <link rel="stylesheet" href="./estilos.css">
+  <link href="./hamburgers.css" rel="stylesheet">
+
+</head>
+<body >
+  <header>
+    <h1>Ejercicios del DOM</h1>
+  </header>
+  <section  id="botonPalancaContainer">
+     <button class="hamburger hamburger--elastic-r" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>  
+  </section>
+  <nav id="menuPalanca" class="palanca menuPalanca">
+    <ul>
+      <li><a class="aMenuNav botonPalanca" href="#Section_1">Reloj Digital y alarma Sonora</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_2">Evento Teclado</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_3">Diferencia Tiempo</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_4">Responsive con JavaScript</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_5">Responsive Tester</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_6">Deteccion de dispositivos (User Agent)</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_7">Deteccion de dispositivo (Camara)</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_8">Geolocalizacion</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_9">Filtro</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_10">Random Win</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_11">Slider</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_12">Smart Video</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_13">Formularios de Contacto (Validaciones)</a></li>
+      <li><a class="aMenuNav botonPalanca" href="#Section_14">Narrador</a></li>
+    </ul>
+  </nav>
+  <section id="Section_1" class="section">
+    <h3>Reloj Digital y alarma Sonora</h3>
+    <div id="reloj_container" class="container reloj">
+      <form name="form_reloj">
+        <input type="text" name="reloj" readonly>
+      </form>
+    </div>
+    <div id="controlador_reloj" class="container reloj">
+      <button id="button-view-reloj" class="button-reloj">Inicar<br>Reloj</button>
+      <button id="button-view-stop" class="button-reloj">Detener<br>Reloj</button>
+      <button id="button-sound-inicia" class="button-reloj">Iniciar<br>alarma</button>
+      <button id="button-sound-stop" class="button-reloj">Detener<br>alarma</button>
+    </div>
+  </section>
+  <section id="Section_2" class="section">
+    <h3>Evento Teclado</h3>
+    <section id="mapa" class="mapa">
+      <div id="pelota" class="personaje"></div>
+    </section>
+    <input type="password" id="controladorPelota" name="controlador" placeholder="Hacer click aqui para controlar Pelota (Solo direccionar)">
+    <p>Para mostrar: Alert <b>(ALT+a)</b>, Prompt <b>(ALT+p)</b>, Confirm <b>(ALT+c)</b></p>
+  </section>
+  <section id="Section_3" class="section">
+    <h3>Diferencia Tiempo</h3>
+    <div class="countDownContainer" id="countDownContainer">
+      <input type="date" id="fechaCountDown">
+      <div id="countDownContainerControl">
+        <button id="countDownPlay">Iniciar<br>Cuenta</button>
+        <button id="countDownStop">Detener<br>Cuenta</button>
+      </div>
+    </div>
+    <div id="relojCountDown"></div>
+  </section>
+  <section id="Section_4" class="section">
+    <h3>Responsible Responsive Design con JavaScript</h3>
+    <div id="containerYM"></div>
+  </section>
+  <section id="Section_5" class="section">
+    <h3>Responsive Tester</h3>
+    <form id="form" action="" method="GET">
+      <div id="upForm">
+        <div>
+          <label for="url">Ingresar URL: </label>
+          <input type="url" name="url" id="v-url" placeholder="URL" required>
+        </div>
+        <div>
+          <label for="altVent">Ingresar Alto: </label>
+          <input type="number" name="altVent" id="v-alto" placeholder="Alto ventana" pattern="^[0-9]{1,4}$" required>
+        </div>
+        <div>
+          <label for="altAnc">Ingresar Ancho: </label>
+          <input type="number" name="altAnc" id="v-ancho" placeholder="Ancho Ventana" pattern="^[0-9]{1,4}$"required>
+        </div>
+      </div>
+      <div id="downForm">
+        <button type="submit" id="abVent">Abrir<br>Ventana</button>
+        <button type="button" id="ceVent">Cerrar<br>Ventana</button>
+      </div>
+    </form>
+  </section>
+  <section id="Section_6" class="section">
+    <h3>Deteccion de dispositivos<br>(User Agent)</h3>
+    <div id="user-device"></div>
+  </section>
+  <section id="Section_7" class="section">
+    <h3>Deteccion de dispositivo (Camara)</h3>
+    <div id="media">
+      <button id='initVid'>Iniciar<br>Camara</button>
+      <button id='stopVid'>Detener<br>Camara</button>
+    </div>
+    <video id='vContainer' autoplay controls hidden></video>
+  </section>
+  <section id="Section_8" class="section">
+    <h3>Geolocalizacion</h3>
+    <button id="btnGeo">Ubicar<br>posicion</button>
+  </section>
+  <section id="Section_9" class="section">
+    <h3>Filtro</h3>
+    <button id="btnIFiltro">Iniciar<br>Filtro</button>
+  </section>
+  <section id="Section_10" class="section">
+    <h3>Random Win</h3>
+    <article id='secSorteo'>
+      <div id="divSorteoCont">
+        <button id="btnAddToSorteo">Agregar<br>al sorteo</button>
+        <button id="btnReiniciarSorteo">Reiniciar<br>el sorteo</button>
+      </div>
+      <input type="text" name="" id="inputTSorteo" placeholder="Ingresa Opcion al sorteo">
+      <button id="btnWinSorteo">Ganador del<br>Sorteo</button>
+      <ol id="ilContSort"></ol>
+    </article>
+  </section>
+  <section id="Section_11" class="section">
+    <h3>Slider</h3>
+    
+      <div id="sliderContainer" class="sliderContainer sliderContainer">
+        <div id="sliderContainerDiv" class="sliderContainer sliderContainer">
+           <img src="https://placeimg.com/800/600/animals" alt="" id="slide0" class="slider sliderLeft">
+           <img src="https://placeimg.com/800/600/arch" alt="" id="slide1" class="slider sliderView" >
+           <img src="https://placeimg.com/800/600/nature" alt="" id="slide2" class="slider sliderRight" >
+           <img src="https://placeimg.com/800/600/people" alt="" id="slide3" class="slider sliderNone" >
+           <img src="https://placeimg.com/800/600/tech" alt="" id="slide4" class="slider sliderNone" >
+        </div>
+        <button class="btnSlider btnSliderRight" id="btnRight">></button>
+        <button class="btnSlider btnSliderLeft" id="btnLeft"><</button>
+      </div>
+    
+  </section>
+  <section id="Section_12" class="section">
+    <h3>Smart Video</h3>
+    <video id="myVideo" src="http://cdn.brid.tv/live/partners/10940/sd/653124.mp4" muted loop></video>
+  </section>
+  <section id="Section_13" class="section">
+    <h3>Formularios de Contacto (Validaciones)</h3>
+    <form action="" id="contactoForm">
+      <h2>Envianos tus comentarios</h2>
+      <div class="formControl">
+        <input id="nContacto" class="inputContacto" type="text" placeholder="Escribe tu nombre" required pattern="[A-Za-z ñ]{5,50}" title="Debe ingresar su nombre">
+        <div id="nContactoDiv"></div>
+      </div>
+      <div class="formControl">
+        <input id="eContacto" class="inputContacto" type="email" placeholder="Escribe tu eMail" required pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" title="Debe ingresar su eMail">
+        <div id="eContactoDiv"></div>
+      </div>
+      <div class="formControl">
+        <input id="cContacto" class="inputContacto" type="text" placeholder="" required pattern="[A-Za-z ñ0-9]{5,50}" title="Debe ingresar asunto de 5 a 50 caracteres">
+        <div id="cContactoDiv"></div>
+      </div>
+      <div class="formControl" id="aContactoDDIV">
+        <textarea id="aContacto" class="inputContacto" name="textarea" required title="Debe ingresar de 5 a 255 caracteres"></textarea>
+        <div id="aContactoDiv"></div>
+      </div>
+      <input id="sContacto" class="btn sContacto" type="submit" required>
+    </form>
+  </section>
+  <section id="Section_14" class="section">
+    <h3>Narrador</h3>
+    <select name="" id="speech-select">
+      <option value="---Elige una Voz---"></option>
+    </select>
+    <br><br>
+    <textarea id="speech-text" cols="50" rows="5" placeholder="Ingresa Texto para leer..."></textarea>
+    <br><br>
+    <button id="speech-btn">Leer Texto</button>
+  </section>
+  </section>
+  <section id="sConexion">
+  </section>
+<!-- Top Scroll -->
+<a href="#" class="to-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+<!-- Top Scroll -->
+<div id="dark-mode-container"><button id="dark-mode" class="dark-mode-btn">🌒</button></div>
+<script src="./dom.js">
+
+</script>
+</body>
+</html>
